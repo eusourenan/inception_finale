@@ -17,7 +17,6 @@ RUN chown -R www-data:www-data /var/www/wordpress \
 	&& chmod 755 /var/www/wordpress
 
 COPY conf/www.conf /etc/php/7.4/fpm/pool.d/www.conf
-COPY conf/wp-config.php /var/www/wordpress/wp-config.php
 
 COPY tool/script.sh /tmp/wp_setup.sh
 
