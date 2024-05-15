@@ -46,7 +46,7 @@ clean:
 
 fclean: clean
 	docker system prune --force --all --volumes
-	sudo rm -rf $(WORDPRESS_DIR) $(MARIA_DIR)
+	sudo rm -rf /home/$(LOGIN)
 
 re: fclean all
 
