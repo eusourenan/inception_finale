@@ -9,7 +9,7 @@ wp --allow-root config create \
 
 wp core install --allow-root \
 	--path=/var/www/wordpress \
-	--title="42SP InceptionHELL" \
+	--title="$TITLE" \
 	--url=$DOMAIN \
 	--admin_user=$ADMIN_NAME \
 	--admin_password=$ADMIN_PASSWORD \
