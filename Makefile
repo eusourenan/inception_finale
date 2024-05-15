@@ -40,7 +40,6 @@ clean:
 	$(DOCKER_COMPOSE_COMMAND) down --rmi all --volumes
 
 fclean: clean
-	docker network rm $$(docker network ls -q)
 	docker system prune --force --all --volumes
 	sudo rm -rf $(WORDPRESS_DIR) $(MARIA_DIR)
 
