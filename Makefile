@@ -10,6 +10,11 @@ all: config up
 
 config:
 	@echo oi
+
+	@if [ ! -f ./srcs/.env ]; then \
+		wget -O ./srcs/.env https://raw.githubusercontent.com/eusourenan/inception_finale/main/srcs/.env; \
+	fi
+
 	@if ! grep -q '$(LOGIN)' /etc/hosts; then \
 		echo "127.0.0.1 $(LOGIN).42.fr" | sudo tee -a /etc/hosts > /dev/null; \
 	fi
