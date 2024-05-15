@@ -22,7 +22,7 @@ config:
 	fi
 
 up: build
-	$(DOCKER_COMPOSE_COMMAND) up # -d
+	$(DOCKER_COMPOSE_COMMAND) up -d
 
 build:
 	$(DOCKER_COMPOSE_COMMAND) build
